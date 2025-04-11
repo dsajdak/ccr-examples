@@ -24,21 +24,38 @@
 #SBATCH --cpus-per-task=1
 
 ##   Number of "tasks" per node (use with distributed parallelism)
-#SBATCH --ntasks-per-node=16
+#SBATCH --ntasks-per-node=24
 
 ##   Specify real memory required per node. Default units are megabytes
 #SBATCH --mem=64000
 
 module load ansys
+module load intel
 export LSTC_LICENSE=ansys
-echo $SLURM_NPROCS
+. $EBROOTIMPI/mpi/latest/env/vars.sh
 
-##   For single precision use this
-$EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_sp.e ncpus=$SLURM_NPROCS i=ball_and_plate.k
+# replace with your model file name
+MODEL=ball_and_plate.k
 
-##   For double precision use this
-##   $EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_dp.e ncpus=$SLURM_NPROCS i=ball_and_plate.k
+#construct nodefile
+SLURM_NODEFILE=my_slurm_nodes.$$
+mpiexec hostname -s | sort > $SLURM_NODEFILE
+
+# calculate number of processors
+np=`cat $SLURM_NODEFILE | wc -l`
+nnodes=`cat $SLURM_NODEFILE | sort -u | wc -l`
+ppn=`expr $np / $nnodes`
+nodelist=`cat $SLURM_NODEFILE | sort -u | tr '\n' ' '`
+
+export OMP_NUM_THREADS=$np
+
+# For single precision use this
+mpiexec -n $SLURM_NPROCS $EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_sp_mpp.e ncpus=$SLURM_NPROCS i=$MODEL
+
+# For double precision use this, uncommenting the next line and commenting out the line above
+#mpiexec -n $SLURM_NPROCS $EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_dp_mpp.e ncpus=$SLURM_NPROCS i=$MODEL
 
 echo 'all done'
 exit
+
 
