@@ -28,4 +28,4 @@
 
 ##   Run abaqus inside the Apptainer container
 ##   Replace [options] with the abaqus options you want to use
-apptainer exec -B /util:/util,/scratch:/scratch /util/software/containers/x86_64/abaqus-2024.sif abaqus [options]
+apptainer exec -B /scratch:/scratch /util/software/containers/x86_64/abaqus-2024.sif abaqus [options]
