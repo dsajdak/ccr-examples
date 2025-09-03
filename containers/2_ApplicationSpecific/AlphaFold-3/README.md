@@ -111,7 +111,9 @@ mkdir -p ./af_input ./af_input_inference ./af_output
 ...then start the AlphaFold container instance
 
 ```
-apptainer shell -B /util:/util,/scratch:/scratch,/projects:/projects --nv \
+apptainer shell \
+ -B /projects:/projects,/scratch:/scratch,/util:/util,/vscratch:/vscratch \
+ --nv \
  ./AlphaFold-3-$(arch).sif
 ```
 

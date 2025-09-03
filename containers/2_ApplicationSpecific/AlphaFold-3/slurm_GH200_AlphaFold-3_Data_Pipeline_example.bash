@@ -42,7 +42,8 @@ echo "Running the Data Pipeline on compute node: $(hostname -s)"
 mkdir -p ./af_input_inference ./af_output
 
 ## Run the Data Pipeline
-apptainer run -B /util:/util,/scratch:/scratch,/projects:/projects \
+apptainer run \
+ -B /projects:/projects,/scratch:/scratch,/util:/util,/vscratch:/vscratch \
  ./AlphaFold-3-$(arch).sif \
  python3 "/app/alphafold/run_alphafold.py" \
  --db_dir="/util/software/data/alphafold3/" \
