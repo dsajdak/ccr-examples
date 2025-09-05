@@ -5,7 +5,7 @@ library(dplyr)
 library(ggplot2)
 
 # --------- Define Input Files and Sample Labels ---------
-# Sample input files for this example are located in `/util/software/data/seurat/`. 
+# Sample input files for this example are located in /util/software/data/seurat/.
 # To use your own files, replace these samples with your own, ensuring the file names and numbering follow your intended convention.
 data_path <- "/util/software/data/seurat"
 
