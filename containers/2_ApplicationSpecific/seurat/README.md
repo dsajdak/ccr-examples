@@ -49,7 +49,7 @@ CCRusername@cpn-h23-04:/projects/academic/[YourGroupName]/[CCRusername]$ apptain
 Apptainer>
 ```
 
-## Run the scRNA analysis (`example_scRNA_seurat.R`)
+## Run the scRNA analysis ([`example_scRNA_seurat.R`](./example_scRNA_seurat.R))
 ```
 Apptainer> R --no-save < example_scRNA_seurat.R
 ```
