@@ -38,7 +38,7 @@ source /opt/openfoam13/etc/bashrc && mkdir -p "${FOAM_RUN}" "${FOAM_JOB_DIR}"
 ```
 
 Example Run
-Taken from the OpenFOAM 13 [Backward-facing step] https://doc.cfd.direct/openfoam/user-guide-v13/backwardstep) example
+Taken from the OpenFOAM 13 [Backward-facing step](https://doc.cfd.direct/openfoam/user-guide-v13/backwardstep) example
 
 ```
 cd "${FOAM_RUN}"
