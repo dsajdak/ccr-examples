@@ -31,7 +31,7 @@ sample output:
 
 All the following commands are run from the "Apptainer> " prompt
 
-Copy the line from above and to use OpenFOAM
+Copy the line from above to use OpenFOAM
 
 ```
 source /opt/openfoam13/etc/bashrc && mkdir -p "${FOAM_RUN}" "${FOAM_JOB_DIR}"
