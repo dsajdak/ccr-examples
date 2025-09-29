@@ -269,8 +269,8 @@ paraFoam
 
 This will start with a ParaView splash screen - press the [Close] button.
 In the lower left hand window pane scroll down to "Mesh Parts" and select
-the dark buttin next to the left of the words "Mesh Parts" then prss [Apply]
-you will then see the mesh as a sold block of one color
+the dark button next to the left of the words "Mesh Parts" then press [Apply]
+you will then see the mesh as a solid block of one color
 You can then follow the instructions in the [OpenFOAM examples doc](https://doc.cfd.direct/openfoam/user-guide-v13/backwardstep#x5-70002.1.3) for 
 this mesh
 
