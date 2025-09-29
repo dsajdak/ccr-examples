@@ -34,8 +34,14 @@ You should now be on the compute node allocated to you.  In this example we're u
 ```
 cd /projects/academic/[YourGroupName]/OpenFOAM
 export APPTAINER_CACHEDIR=${SLURMTMPDIR}
-
 ```
+
+In the `OpenFOAM-13.def` file, change the FOAM_BASE_DIR on following line to
+your projects directory:
+
+> ```
+>   export FOAM_BASE_DIR="/projects/academic/[YourGroupName]"
+> ```
 
 3. Build your container
 
@@ -123,6 +129,6 @@ the decomposeParDict file.
 
 Slurm script examples:
 
-[OpenFOAM with "srun"](https://raw.githubusercontent.com/tonykew/ccr-examples/refs/heads/OpenFOAM/containers/2_ApplicationSpecific/OpenFOAM/slurm_OpenFOAM_example.bash)  
+[OpenFOAM with "srun"](https://raw.githubusercontent.com/ubccr/ccr-examples/refs/heads/main/containers/2_ApplicationSpecific/OpenFOAM/slurm_OpenFOAM_example.bash)
 
 See the [OpenFOAM website][https://openfoam.org) and the [OpenFOAM version 13 User Guide](https://doc.cfd.direct/openfoam/user-guide-v13/index) for more information on OpenFOAM
