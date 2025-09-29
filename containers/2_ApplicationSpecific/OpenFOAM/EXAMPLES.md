@@ -232,7 +232,7 @@ cd /projects/academic/[YourGroupName]/OpenFOAM
 
 ...and start the container shell
 NOTE: This is NOT the same command as above, there are added bind mounts that
- are neccessary to run paraFoam in CCR's OnDemand
+ are necessary to run paraFoam in CCR's OnDemand
 
 ```
 apptainer shell -B /util:/util -B /scratch:/scratch -B /projects:/projects \
