@@ -18,6 +18,7 @@ Please refer to CCR's [container documentation](https://docs.ccr.buffalo.edu/en/
 | [OpenFOAM](./OpenFOAM)               | OpenFOAM container with steps for building and running via Apptainer and Slurm |
 | [OpenSees](./OpenSees)               | OpenSees container with steps for building and running via Apptainer |
 | [SAS](./sas)                         | Guide for running SAS using Apptainer via Slurm batch script, command line, and GUI access |
+| [Seurat](./seurat)                   | Seurat container with example scRNA analysis |
 | [VASP](./vasp)                       | Example VASP container with steps for building and running via Apptainer |
 
 ## Additional Information
