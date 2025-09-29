@@ -124,9 +124,9 @@ From: ubuntu:24.04
   sed -E -i '/^setenv[[:space:]]+FOAM_JOB_DIR/s|^.*$|if ( "$SLURMTMPDIR" != "") then\n  setenv FOAM_JOB_DIR "$SLURMTMPDIR/jobControl"\nelse\n  setenv FOAM_JOB_DIR "/var/tmp/jobControl"\nendif|' /opt/openfoam13/etc/config.csh/settings
 
   #############################################################################
-  # Change the following value (e.g.) /projects/academic/[CCRgroup]
+  # Change the following value to point to your project directory
   #############################################################################
-  export FOAM_BASE_DIR="/projects/academic/ccradmintest/tkewtest"
+  export FOAM_BASE_DIR="/projects/academic/[YourGroupName]/[CCRUsername]"
   #############################################################################
 
   # change the default runtime directory from ${HOME}

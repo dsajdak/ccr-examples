@@ -31,14 +31,14 @@ sample output:
 
 All the following commands are run from the "Apptainer> " prompt
 
-Copy the line from above and to use OpenFOAM
+Copy the line from above to use OpenFOAM
 
 ```
 source /opt/openfoam13/etc/bashrc && mkdir -p "${FOAM_RUN}" "${FOAM_JOB_DIR}"
 ```
 
 Example Run
-Taken from the OpenFOAM 13 [Backward-facing step] https://doc.cfd.direct/openfoam/user-guide-v13/backwardstep) example
+Taken from the OpenFOAM 13 [Backward-facing step](https://doc.cfd.direct/openfoam/user-guide-v13/backwardstep) example
 
 ```
 cd "${FOAM_RUN}"
@@ -200,7 +200,7 @@ sample output:
 
 Since paraFoam is a GUI application, it must be run in an [OnDemand portal](https://ondemand.ccr.buffalo.edu) session
 and generally requires at least 128GB of memory to run
-For exampple:
+For example:
 
 Open a browser window to our [OnDemand portal](https://ondemand.ccr.buffalo.edu)
 
@@ -232,7 +232,7 @@ cd /projects/academic/[YourGroupName]/OpenFOAM
 
 ...and start the container shell
 NOTE: This is NOT the same command as above, there are added bind mounts that
- are neccessary to run paraFoam in CCR's OnDemand
+ are necessary to run paraFoam in CCR's OnDemand
 
 ```
 apptainer shell -B /util:/util -B /scratch:/scratch -B /projects:/projects \
@@ -258,8 +258,8 @@ copy the line from above to use OpenFOAM
 source /opt/openfoam13/etc/bashrc && mkdir -p "${FOAM_RUN}" "${FOAM_JOB_DIR}"
 ```
 
-This example uses the data gerated in the text example above, following
-the [Backward-facing step] https://doc.cfd.direct/openfoam/user-guide-v13/backwardstep) example
+This example uses the data generated in the text example above, following
+the [Backward-facing step](https://doc.cfd.direct/openfoam/user-guide-v13/backwardstep) example
 Note that those commands could have been run from the "Apptainer> " prompt here.
 
 ```
@@ -269,8 +269,8 @@ paraFoam
 
 This will start with a ParaView splash screen - press the [Close] button.
 In the lower left hand window pane scroll down to "Mesh Parts" and select
-the dark buttin next to the left of the words "Mesh Parts" then prss [Apply]
-you will then see the mesh as a sold block of one color
+the dark button next to the left of the words "Mesh Parts" then press [Apply]
+you will then see the mesh as a solid block of one color
 You can then follow the instructions in the [OpenFOAM examples doc](https://doc.cfd.direct/openfoam/user-guide-v13/backwardstep#x5-70002.1.3) for 
 this mesh
 
