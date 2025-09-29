@@ -126,7 +126,7 @@ From: ubuntu:24.04
   #############################################################################
   # Change the following value to point to your project directory
   #############################################################################
-  export FOAM_BASE_DIR="/projects/academic/[YourGroupName]/[CCRUsername]"
+  export FOAM_BASE_DIR="/projects/academic/[YourGroupName]"
   #############################################################################
 
   # change the default runtime directory from ${HOME}

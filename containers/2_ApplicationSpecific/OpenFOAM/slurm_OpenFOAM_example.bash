@@ -35,7 +35,7 @@ if [ "${APPTAINER_NAME}" = "" ]
 then
   # Launch the container with this script
   exec apptainer exec -B /util:/util,/scratch:/scratch,/projects:/projects \
-   /projects/academic/ccradmintest/tkewtest/OpenFOAM/OpenFOAM-13-$(arch).sif \
+   /projects/academic/[YourGroupName]/OpenFOAM/OpenFOAM-13-$(arch).sif \
    bash "$(scontrol show job $SLURM_JOB_ID | awk -F= '/Command=/{print $2}')"
 fi
 # Inside the container - OpenFOAM setup:
