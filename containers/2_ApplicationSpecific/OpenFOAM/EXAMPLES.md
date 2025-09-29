@@ -258,7 +258,7 @@ copy the line from above to use OpenFOAM
 source /opt/openfoam13/etc/bashrc && mkdir -p "${FOAM_RUN}" "${FOAM_JOB_DIR}"
 ```
 
-This example uses the data gerated in the text example above, following
+This example uses the data generated in the text example above, following
 the [Backward-facing step] https://doc.cfd.direct/openfoam/user-guide-v13/backwardstep) example
 Note that those commands could have been run from the "Apptainer> " prompt here.
 
