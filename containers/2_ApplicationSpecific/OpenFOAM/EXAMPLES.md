@@ -200,7 +200,7 @@ sample output:
 
 Since paraFoam is a GUI application, it must be run in an [OnDemand portal](https://ondemand.ccr.buffalo.edu) session
 and generally requires at least 128GB of memory to run
-For exampple:
+For example:
 
 Open a browser window to our [OnDemand portal](https://ondemand.ccr.buffalo.edu)
 
