@@ -187,8 +187,8 @@ Slurm script examples:
 [AlphaFold 3 Slurm Inference example](https://raw.githubusercontent.com/tonykew/ccr-examples/refs/heads/AlphaFold-3/containers/2_ApplicationSpecific/AlphaFold-3/slurm_AlphaFold-3_Inference_example.bash)
 
 ### Grace Hopper (GH200) GPU example
-[AlphaFold 3 Slurm (x86_64) Data Pipeline example](https://raw.githubusercontent.com/tonykew/ccr-examples/refs/heads/AlphaFold-3/containers/2_ApplicationSpecific/AlphaFold-3/slurm_GH200_AlphaFold-3_Data_Pipeline_example.bash)  
-[AlphaFold 3 Slurm Grace Hopper Inference example](https://raw.githubusercontent.com/tonykew/ccr-examples/refs/heads/AlphaFold-3/containers/2_ApplicationSpecific/AlphaFold-3/slurm_GH200_AlphaFold-3_Inference_example.bash)
+[AlphaFold 3 Slurm (x86_64) Data Pipeline example](https://raw.githubusercontent.com/ubccr/ccr-examples/refs/heads/main/containers/2_ApplicationSpecific/AlphaFold-3/slurm_GH200_AlphaFold-3_Data_Pipeline_example.bash)  
+[AlphaFold 3 Slurm Grace Hopper Inference example](hhttps://raw.githubusercontent.com/ubccr/ccr-examples/refs/heads/main/containers/2_ApplicationSpecific/AlphaFold-3/slurm_GH200_AlphaFold-3_Inference_example.bash)
 
 
 ## Documentation Resources
