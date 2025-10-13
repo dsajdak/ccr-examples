@@ -26,7 +26,7 @@ sample outout:
 > ```
 
 Change to your AlphaFold-3 directory
-The "AlphaFold-3.def" file will already be in the directory if you have already built
+The `AlphaFold-3.def` file will already be in the directory if you have already built
 on the x86_64 platform, if not, copy the file here.
 
 ```

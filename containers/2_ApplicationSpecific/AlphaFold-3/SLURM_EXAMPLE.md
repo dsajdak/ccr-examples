@@ -8,12 +8,13 @@ Change to your AlphaFold-3 directory
 cd /projects/academic/[YourGroupName]/AlphaFold-3
 ```
 
-Copy the sample Slurm scripts "slurm_AlphaFold-3_Data_Pipeline_example.bash"
-and "slurm_AlphaFold-3_Inference_example.bash" to this directory then modify
+Copy the sample Slurm scripts [slurm_AlphaFold-3_Data_Pipeline_example.bash](./slurm_AlphaFold-3_Data_Pipeline_example.bash)
+and [slurm_AlphaFold-3_Inference_example.bash](./slurm_AlphaFold-3_Inference_example.bash) to this directory then modify
 for your use case.
 
 You should change the SLURM cluster, partition, qos and account; then change
-the "[YourGroupName]" in the cd command:
+the `[YourGroupName]` in the cd command.
+Use the `slimits` command to see what accounts and QOS settings you have access to.
 
 Make these changes in BOTH Slurm scripts
 
@@ -68,7 +69,7 @@ abridged sample output:
 Note that the partition/qos combination does not have to be the same for the
 Data Pipeline and Inference scripts.
 
-NOTE: You can add other Slurm options to eiher script.
+NOTE: You can add other Slurm options to either script.
 For example, if you want the Inference to run on an H100 GPU (with 80GB RAM)
 add the following to (only) the Inference script, "slurm_AlphaFold-3_Inference_example.bash"
 
@@ -256,7 +257,7 @@ sample output:
 > Done running 1 fold jobs.
 > ```
 
-Note from the about output the location of the AlphaFold run output files
+Note from the above output the location of the AlphaFold run output files
 
 ```
 ls -l ./af_output/2PV7

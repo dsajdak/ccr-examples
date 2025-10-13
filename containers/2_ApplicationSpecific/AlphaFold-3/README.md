@@ -73,7 +73,7 @@ export APPTAINER_CACHEDIR=${SLURMTMPDIR}
 
 3. Build your container
 
-Building the AlphaFold-3 container taks about half an hour
+Building the AlphaFold-3 container takes about half an hour
 
 ```
 apptainer build --fakeroot AlphaFold-3-$(arch).sif AlphaFold-3.def

@@ -8,7 +8,7 @@ Change to your AlphaFold-3 directory
 cd /projects/academic/[YourGroupName]/AlphaFold-3
 ```
 
-Then create the sample fold_input.json from [here](https://github.com/google-deepmind/alphafold3?tab=readme-ov-file#installation-and-running-your-first-prediction)
+Then create the sample `fold_input.json` from [here](https://github.com/google-deepmind/alphafold3?tab=readme-ov-file#installation-and-running-your-first-prediction)
 
 ```
 mkdir -p ./af_input ./af_input_inference ./af_output
@@ -119,7 +119,7 @@ sample output:
 > Done running 1 fold jobs.
 > ```
 
-The JSON output file (as seen in the above output) is ./af_output/2PV7/2PV7_data.json
+The JSON output file (as seen in the above output) is `./af_output/2PV7/2PV7_data.json`
 
 ```
 ls -l ./af_output/2PV7/2PV7_data.json
@@ -131,7 +131,7 @@ sample output:
 > -rw-rw-r-- 1 [CCRusername] nogroup 7301275 Aug  1 11:12 ./af_output/2PV7/2PV7_data.json
 > ```
 
-The "./af_output/2PV7" directory will be used as the input directory for the Inference run
+The `./af_output/2PV7` directory will be used as the input directory for the Inference run
 
 exit the container and exit the interactive Slurm job
 
@@ -241,7 +241,7 @@ sample output:
 > ```
 
 
-Note from the about output the location of the AlphaFold run output files
+Note from the above output the location of the AlphaFold run output files
 
 ```
 ls -l ./af_output/2PV7
