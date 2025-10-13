@@ -3,7 +3,7 @@
 ## Obtain the model parameters file from Google
 
 NOTE:
-ALphaFold 3 requeres a model parameters file.
+ALphaFold 3 requires a model parameters file.
 You must request the file with [this form](https://forms.gle/svvpY4u2jsHEwWYS6) and agree to the software [terms of use](https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md)
 
 If you are granted access to the file, Google will email you a download link.
@@ -29,7 +29,7 @@ chmod 550 ./models/
 ```
 
 
-## Buid the ARM64 container image
+## Build the ARM64 container image
 
 First, build the x86_64 container as per the [README.md](./README.md) since
 the Data Pipeline in this example will be run on the much more readily
@@ -46,12 +46,13 @@ Change to your AlphaFold-3 directory
 cd /projects/academic/[YourGroupName]/AlphaFold-3
 ```
 
-Copy the sample Slurm scripts "slurm_GH200_AlphaFold-3_Data_Pipeline_example.bash"
-and "slurm_GH200_AlphaFold-3_Inference_example.bash" to this directory then
+Copy the sample Slurm scripts [slurm_GH200_AlphaFold-3_Data_Pipeline_example.bash](./slurm_GH200_AlphaFold-3_Data_Pipeline_example.bash)
+and [slurm_GH200_AlphaFold-3_Inference_example.bash](./slurm_GH200_AlphaFold-3_Inference_example.bash) to this directory then
 modify for your use case.
 
 You should change the SLURM cluster, partition, qos, account; and change
-the "[YourGroupName]" in the cd command.
+the `[YourGroupName]` in the cd command.
+Use the `slimits` command to see what accounts and QOS settings you have access to.
 
 For example:
 
@@ -133,7 +134,7 @@ the "slurm_AlphaFold-3_Data_Pipeline_example_dev.bash" file:
 > ```
 
 You only need to submit the Data Pipeline Slurm script.  If the Data Pipeline
-completes wthout errors, it will submit the Inference script with the output
+completes without errors, it will submit the Inference script with the output
 from the Data Pipeline automatically
 
 ```
@@ -272,7 +273,7 @@ sample output:
 > Done running 1 fold jobs.
 > ```
 
-Note from the about output the location of the AlphaFold run output files
+Note from the above output the location of the AlphaFold run output files
 
 ```
 ls -l ./af_output/2PV7
