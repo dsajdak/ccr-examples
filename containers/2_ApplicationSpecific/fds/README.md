@@ -1,10 +1,10 @@
 # Example FDS container  
 
-The Fire Dynamics Simulator (FDS) is a large-eddy simulation (LES) code for low-speed flows, with an emphasis on smoke and heat transport from fires.  For more information on this program, visit the [website](https://pages.nist.gov/fds-smv/).  The easiest way to run FDS in CCR's HPC environment is using a container. Docker containers are available via this [third party](https://hub.docker.com/r/satcomx00/fds) and version 6.7.9 was tested for this example.  This container includes Intel MPI version .  CCR's `ccrsoft/2023.01` software environment includes a module for `intel/2022.00` which includes `impi 2021.5.0`  These two versions of MPI are alike enough that this container works when loading the `intel/2022.00` module.  However, the user should be aware with future versions of FDS and CCR's intel modules, that you must align MPI versions on the system with the container in order for them to work properly.  See [here](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/#building-mpi-enabled-images) for more info.
+The Fire Dynamics Simulator (FDS) is a large-eddy simulation (LES) code for low-speed flows, with an emphasis on smoke and heat transport from fires.  For more information on this program, visit the [website](https://pages.nist.gov/fds-smv/).  The easiest way to run FDS in CCR's HPC environment is using a container. Docker containers are available via this [third party](https://hub.docker.com/r/satcomx00/fds) and version 6.7.9 was tested for this example.  This container includes Intel MPI Library 2021.6.  CCR's `ccrsoft/2023.01` [software environment](https://docs.ccr.buffalo.edu/en/latest/software/releases/#202301) includes a module for `intel/2022.00` which includes `impi 2021.5.0`  These two versions of MPI are alike enough that this container works when loading the `intel/2022.00` module.  However, the user should be aware with future versions of FDS and CCR's intel modules, that you must align MPI versions on the system with the container in order for them to work properly.  See [here](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/#building-mpi-enabled-images) for more info.
 
 ## Pulling the container  
 
-Please refer to CCR's [container documentation](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/) for information on using Apptainer.  This example shows how to pull a container from Docker Hub and convert it to an Apptainer image file.  This can be done from a compile node or a compute node.  Apptainer is not available on the CCR login nodes.  
+Please refer to CCR's [container documentation](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/) for information on using Apptainer.  This example shows how to pull a container from Docker Hub and convert it to an Apptainer image file.  This can be done from a [compile node or a compute node](https://docs.ccr.buffalo.edu/en/latest/hpc/clusters/#node-types).  Apptainer is not available on the CCR login nodes.  
 
 ```
 CCRusername@login:~$ ssh compile  
@@ -18,7 +18,7 @@ This will save the Apptainer image as `fds_6.7.9.sif` in your current working di
 
 ## Running the container image  
 
-You could run FDS either in an interactive job or non-interactively by using a batch script (recommended).  
+You can run FDS either in an interactive job or non-interactively by using a batch script (recommended).  
 
 ### Interactive option  
 
@@ -72,7 +72,7 @@ STOP: FDS completed successfully (CHID: radiator)
 
 ### Batch script option  
 
-Using the [`fds-example.sh`](fds-example.sh) script as an example, modify the settings to meet your needs.  FDS is capable of running across multiple nodes but this should only be utilized if your problem requires more than the number of CPUs in a compute node.  The specifications avaialable in CCR's UB-HPC cluster can be found [here](https://docs.ccr.buffalo.edu/en/latest/hpc/clusters/#ub-hpc-detailed-hardware-specifications).  Please refer to the Slurm options file and examples for running batch scripts as shown in our [Slurm examples repository](../../../slurm/README.md) for more details.  
+Using the [`fds-example.sh`](fds-example.sh) script as an example, modify the settings to meet your needs.  FDS is capable of running across multiple nodes but this should only be utilized if your problem requires more than the number of CPUs in a compute node.  Running FDS across multiple nodes will increase the time it takes for your problem to compute.  The specifications for available compute nodes in CCR's UB-HPC cluster can be found [here](https://docs.ccr.buffalo.edu/en/latest/hpc/clusters/#ub-hpc-detailed-hardware-specifications).  Please refer to the Slurm options file and examples for running batch scripts as shown in our [Slurm examples repository](../../../slurm/README.md) for more details.  Please also refer to the [FDS documentation](https://pages.nist.gov/fds-smv/manuals.html) to properly setup your requests for CPUs and tasks.
 
 
 For more info on accessing shared project and global scratch directories, resource options, and other important container topics, please refer to the CCR [container documentation](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/) 
